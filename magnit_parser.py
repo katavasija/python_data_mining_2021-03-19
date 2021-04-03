@@ -8,7 +8,7 @@ class MagnitParse:
         self.start_url = start_url
 
     def get_soup(self, *args, **kwargs) -> bs4.BeautifulSoup:
-        soup = bs4.BeautifulSoup(rh.get_response(self.start_url).text, "html5lib")
+        soup = bs4.BeautifulSoup(rh.get_response(self.start_url).text, "lxml")
         return soup
 
     @property
